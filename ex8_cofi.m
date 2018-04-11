@@ -1,6 +1,6 @@
 
 %% =============== Part 1: Loading movie ratings dataset ================
-%  You will start by loading the movie ratings dataset to understand the
+%  we will start by loading the movie ratings dataset to understand the
 %  structure of the data.
 %  
 fprintf('Loading movie ratings dataset.\n\n');
@@ -44,29 +44,16 @@ J = cofiCostFunc([X(:) ; Theta(:)], Y, R, num_users, num_movies, ...
                num_features, 0);
            
 fprintf(['Cost at loaded parameters: %f '...
-         '\n(this value should be about 22.22)\n'], J);
+          ], J);
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
-
-%% ============== Part 3: Collaborative Filtering Gradient ==============
-%  Once your cost function matches up with ours, you should now implement 
-%  the collaborative filtering gradient function. Specifically, you should 
-%  complete the code in cofiCostFunc.m to return the grad argument.
-%  
-fprintf('\nChecking Gradients (without regularization) ... \n');
-
-%  Check gradients by running checkNNGradients
-checkCostFunction;
-
-fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
 
 
 %% ========= Part 4: Collaborative Filtering Cost Regularization ========
-%  Now, you should implement regularization for the cost function for 
-%  collaborative filtering. You can implement it by adding the cost of
+%  Now, we should implement regularization for the cost function for 
+%  collaborative filtering. we can implement it by adding the cost of
 %  regularization to the original cost computation.
 %  
 
@@ -75,31 +62,18 @@ J = cofiCostFunc([X(:) ; Theta(:)], Y, R, num_users, num_movies, ...
                num_features, 1.5);
            
 fprintf(['Cost at loaded parameters (lambda = 1.5): %f '...
-         '\n(this value should be about 31.34)\n'], J);
+         ], J);
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
 
-%% ======= Part 5: Collaborative Filtering Gradient Regularization ======
-%  Once your cost matches up with ours, you should proceed to implement 
-%  regularization for the gradient. 
-%
-
-%  
-fprintf('\nChecking Gradients (with regularization) ... \n');
-
-%  Check gradients by running checkNNGradients
-checkCostFunction(1.5);
-
-fprintf('\nProgram paused. Press enter to continue.\n');
-pause;
 
 
 %% ============== Part 6: Entering ratings for a new user ===============
 %  Before we will train the collaborative filtering model, we will first
 %  add ratings that correspond to a new user that we just observed. This
-%  part of the code will also allow you to put in your own ratings for the
+%  part of the code will also allow us to put in our own ratings for the
 %  movies in our dataset!
 %
 movieList = loadMovieList();
@@ -139,7 +113,7 @@ pause;
 
 
 %% ================== Part 7: Learning Movie Ratings ====================
-%  Now, you will train the collaborative filtering model on a movie rating 
+%  Now, we will train the collaborative filtering model on a movie rating 
 %  dataset of 1682 movies and 943 users
 %
 
